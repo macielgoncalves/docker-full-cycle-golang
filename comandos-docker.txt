@@ -1,0 +1,12 @@
+
+-- Construir uma imagem Dokcer
+sudo docker build -t macielkamersg/desafio-go:prod . -f Dockerfile.prod
+
+-- Executar uma imagem Docker
+docker run macielkamersg/desafio-go:prod 
+
+-- Enviar uma imagem para o Docker Hub
+docker push macielkamersg/desafio-go:prod
+
+-- Excluir todos com containers
+docker rm $(docker ps -a -q)
